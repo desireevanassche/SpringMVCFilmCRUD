@@ -39,7 +39,8 @@
 	
 			<a href="filmbyid.jsp">Find Film By ID</a> <br> <a
 				href="filmbykey.jsp">Find Film By Keyword</a> <br> <a
-				href="createfilm.jsp">Create a New Film</a> <br>
+				href="createfilm.jsp">Create a New Film</a> <br><a
+				href="updatefilm.jsp">Update a Film</a> <br>
 		</div>
 	</div>
 	</div>
