@@ -195,7 +195,7 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 			Connection conn = DriverManager.getConnection(URL, user, pass);
 			String sql = "INSERT INTO film"
 					+ "(title, description, release_year, language_id, rental_duration, rental_rate, length, replacement_cost, rating, special_features"
-					+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+					+ " ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			stmt.setString(1, film.getTitle());
 			stmt.setString(2, film.getDescription());
@@ -203,11 +203,14 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 			stmt.setInt(4, film.getLanguageID());
 			stmt.setInt(5, film.getRentalDuration());
 			stmt.setDouble(6, film.getRantalRate());
-			stmt.setInt(7, film.getLength());
+//			stmt.setInt(7, film.getLength());
+			stmt.setInt(7, 99);
+			
 			stmt.setDouble(8, film.getReplacementCost());
 			stmt.setString(9, film.getRating());
 			stmt.setString(10, film.getSpecialFeatures());
 
+			System.out.println(stmt);
 			int updateCount = stmt.executeUpdate();
 			if (updateCount == 1) {
 				ResultSet rs = stmt.getGeneratedKeys();

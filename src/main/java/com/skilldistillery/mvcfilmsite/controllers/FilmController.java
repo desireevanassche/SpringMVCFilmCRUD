@@ -43,8 +43,9 @@ public class FilmController {
 
 }
 	
-	@RequestMapping(path = "createfilm.do", params = "title, releaseYear, languageID, rentalDuration, rantalRate, length, replacementCost, rating, specialFeatures, language", method = RequestMethod.GET)
-	public ModelAndView createFilm(@RequestParam("title, releaseYear, languageID, rentalDuration, rantalRate, length, replacementCost, rating, specialFeatures, language") Film film) {
+	@RequestMapping(path = "createfilm.do", method = RequestMethod.POST)
+	public ModelAndView createFilm( Film film) {
+		System.out.println(film);
 		ModelAndView mv = new ModelAndView();
 		Film newFilm = filmDao.createFilm(film);
 		mv.addObject("film", newFilm);
