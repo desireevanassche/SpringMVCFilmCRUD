@@ -8,5 +8,11 @@
 </head>
 <body>
 <h1>Film Site</h1>
+  <h3>Films</h3>
+  <form action="home.do" method="GET">
+    ID:
+    <input type="text" name="id"/> 
+    <input type="submit" value="Get Film Data" />
+  </form>
 </body>
 </html>
