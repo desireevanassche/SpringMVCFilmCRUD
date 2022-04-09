@@ -36,7 +36,7 @@ public class FilmController {
 	public ModelAndView filmbyKey(@RequestParam("keyword") String keyword) {
 		ModelAndView mv = new ModelAndView();
 		List<Film> s = filmDao.findFilmBySearchKeyword(keyword);
-		mv.addObject("film", s);
+		mv.addObject("films", s);
 		mv.setViewName("WEB-INF/result.jsp");
 		return mv;
 	
