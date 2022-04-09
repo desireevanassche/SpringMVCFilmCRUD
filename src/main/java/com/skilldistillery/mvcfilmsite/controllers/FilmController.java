@@ -42,4 +42,14 @@ public class FilmController {
 	
 
 }
+	
+	@RequestMapping(path = "createfilm.do", params = "title, releaseYear, languageID, rentalDuration, rantalRate, length, replacementCost, rating, specialFeatures, language", method = RequestMethod.GET)
+	public ModelAndView createFilm(@RequestParam("keyword") Film film) {
+		ModelAndView mv = new ModelAndView();
+		Film newFilm = filmDao.createFilm(film);
+		mv.addObject("film", newFilm);
+		mv.setViewName("WEB-INF/result.jsp");
+		return mv;
+		
+	}
 }
