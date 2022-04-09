@@ -32,8 +32,7 @@
 
 	<div class="row no-gutters">
 		<div class="col" id="homeGrid">
-			<img id="reel"
-				src=https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?cs=srgb&dl=pexels-cottonbro-3945313.jpg&fm=jpg>
+		<a data-flickr-embed="true" href="https://www.flickr.com/photos/195450042@N08/51993560184/in/dateposted-public/" title="cinema"><img src="https://live.staticflickr.com/65535/51993560184_a17cb2acb3_c.jpg" width="700" height="800" alt="cinema"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 		</div>
 		<div class="col" id="menu">
 	

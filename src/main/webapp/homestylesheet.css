@@ -15,7 +15,8 @@ p {
 }
 
 #reel {
-	height: 1000px;
+	height: 700px;
+	width: 700px;
 	align-self: left;
 	padding-left: 0;
 	margin-left: 0;

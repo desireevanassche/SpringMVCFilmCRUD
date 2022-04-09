@@ -21,5 +21,7 @@
 		<div class="col" id="menu">
 			<img id="reel"
 				src=https://images.pexels.com/photos/6661040/pexels-photo-6661040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1>
+
+
 </body>
 </html>
