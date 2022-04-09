@@ -31,15 +31,15 @@ public class FilmController {
 		mv.setViewName("WEB-INF/result.jsp");
 		return mv;
 	}
-	
+
 	@RequestMapping(path = "filmbykey.do", params = "keyword", method = RequestMethod.GET)
-	public ModelAndView filmbyKey(@RequestParam("keyword") String keyword) {
+	public ModelAndView home(@RequestParam("keyword") String keyword) {
 		ModelAndView mv = new ModelAndView();
 		List<Film> s = filmDao.findFilmBySearchKeyword(keyword);
 		mv.addObject("films", s);
 		mv.setViewName("WEB-INF/result.jsp");
 		return mv;
-	
+
 
 }
 	
