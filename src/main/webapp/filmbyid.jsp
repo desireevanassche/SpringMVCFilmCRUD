@@ -5,6 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>MVC Film Site</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap" rel="stylesheet">
+
+<link href="homestylesheet.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 	<h1>Film Site</h1>
@@ -20,5 +26,6 @@
 			<img id="reel"
 				src=https://images.pexels.com/photos/7319158/pexels-photo-7319158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1>
 		</div>
+		<br>
 </body>
 </html>

@@ -80,6 +80,8 @@
 		<br>  -->
 
 		<input type="submit" value="add" />
+		<br>
+		<a href="home.jsp">Return to Main Menu</a>
 
 	</form>
 

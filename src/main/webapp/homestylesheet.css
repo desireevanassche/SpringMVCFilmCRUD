@@ -1,26 +1,40 @@
 @charset "UTF-8";
 
 body {
+	font-family: 'Spectral', serif;
 	background-color: #F6F6F6;
 	color: black;
 	text-align: center;
 }
 
 p {
-	font-family: 'Petrona', serif;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Spectral', serif;
 	font-size: 24px;
 	letter-spacing: 2px;
 	background-color: #F6F6F6;
 }
 
-#reel {
+home {
+	font-size: 18px;
+}
+
+#keyPhoto {
+	height: 700px;
+	width: 700px;
+}
+
+.row1, .row2, .row3, .row4 {
+	padding-top: 20px;
+}
+
+#reel, #keywordLeft {
 	height: 700px;
 	width: 700px;
 	align-self: left;
 	padding-left: 0;
 	margin-left: 0;
 }
+
 
 .no-gutters {
 	margin-right: 0;
@@ -30,21 +44,31 @@ p {
 	text-align: center;
 	background-color: #F6F6F6;
 	text-align: center;
+	font-family: 'Spectral', serif;
 }
 
-#menu {
+#menu, #keywordGrid {
 	padding-top: 200px;
 	justify-content: center;
+	font-family: 'Spectral', serif;
 }
+
 
 a {
 	color: black;
 	text-decoration: none;
 	font-size: 35px;
 	text-align: center;
+	font-family: 'Spectral', serif;
 }
 
 a:hover {
-	color: red;
-	text-decoration: underline;
+	color: #FE0253;
+	text-decoration: none;
+}
+
+#keyHead {
+	font-size: 35px;
+	padding-top: 100px;
+	padding-bottom: 120px;
 }
