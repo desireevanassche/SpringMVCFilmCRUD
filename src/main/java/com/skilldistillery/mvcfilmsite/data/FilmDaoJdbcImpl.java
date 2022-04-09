@@ -64,11 +64,13 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 
 		try {
 			Connection conn = DriverManager.getConnection(URL, user, pass);
-			String sql = "SELECT id, title, description, release_year, language_id, rental_duration, rental_rate, length, replacement_cost, rating, special_features FROM film WHERE title LIKE ? OR description LIKE ?;";
+			String sql = "SELECT id, title, description, release_year, language_id, rental_duration, rental_rate, length, replacement_cost, rating, special_features FROM film WHERE title LIKE ? OR description LIKE ?";
 
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setString(1, "%" + keyword + "%");
 			stmt.setString(2, "%" + keyword + "%");
+			
+			
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				Film film = new Film();
@@ -94,6 +96,7 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 			e.printStackTrace();
 		}
 
+//		System.out.println(films);
 		return films;
 	}
 

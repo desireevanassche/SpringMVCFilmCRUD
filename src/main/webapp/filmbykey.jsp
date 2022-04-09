@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +8,7 @@
 
 </head>
 <body>
-<form action="filmbykey.do" method="GET">
+	<form action="filmbykey.do" method="GET">
 		Keyword: <input type="text" name="keyword" /> <input type="submit"
 			value="Get Film Data" />
 	</form>

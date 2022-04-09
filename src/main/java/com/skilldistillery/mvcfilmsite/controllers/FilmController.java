@@ -36,7 +36,7 @@ public class FilmController {
 	public ModelAndView filmbyKey(@RequestParam("keyword") String keyword) {
 		ModelAndView mv = new ModelAndView();
 		List<Film> s = filmDao.findFilmBySearchKeyword(keyword);
-		mv.addObject("film", s);
+		mv.addObject("films", s);
 		mv.setViewName("WEB-INF/result.jsp");
 		return mv;
 	
@@ -44,7 +44,7 @@ public class FilmController {
 }
 	
 	@RequestMapping(path = "createfilm.do", params = "title, releaseYear, languageID, rentalDuration, rantalRate, length, replacementCost, rating, specialFeatures, language", method = RequestMethod.GET)
-	public ModelAndView createFilm(@RequestParam("keyword") Film film) {
+	public ModelAndView createFilm(@RequestParam("title, releaseYear, languageID, rentalDuration, rantalRate, length, replacementCost, rating, specialFeatures, language") Film film) {
 		ModelAndView mv = new ModelAndView();
 		Film newFilm = filmDao.createFilm(film);
 		mv.addObject("film", newFilm);
