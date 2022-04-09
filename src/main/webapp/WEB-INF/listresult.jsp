@@ -10,7 +10,7 @@
 </head>
 <body>
   <c:choose>
-    <c:when test="${! empty film}">
+<%--     <c:when test="${! empty film}">
       <ul>
         <li>${film.id}</li>
         <li>${film.title}</li>
@@ -18,18 +18,18 @@
         <li>${film.releaseYear}</li>
    		
       </ul>
-    </c:when>
+    </c:when> --%>
     
- <%--    		<c:when test="${! empty films}">
+    		<c:when test="${! empty films}">
 			<ul>
-				<c:forEach var="film" items="{$films}">
+				<c:forEach var="film" items="${films}">
 					<li>${film.id}</li>
 					<li>${film.title}</li>
 					<li>${film.description}</li>
-
+					<li>${film.releaseYear}</li>
 				</c:forEach>
 			</ul>
-		</c:when> --%>
+		</c:when>
     <c:otherwise>
       <p>No film found</p>
     </c:otherwise>
