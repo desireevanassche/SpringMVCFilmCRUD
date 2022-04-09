@@ -12,7 +12,6 @@ import java.util.List;
 import com.skilldistillery.mvcfilmsite.entities.Film;
 import com.skilldistillery.mvcfilmsite.entities.Actor;
 
-
 public class FilmDaoJdbcImpl implements FilmDAO {
 	private static final String URL = "jdbc:mysql://localhost:3306/sdvid?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=US/Mountain";
 
@@ -69,8 +68,7 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setString(1, "%" + keyword + "%");
 			stmt.setString(2, "%" + keyword + "%");
-			
-			
+
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				Film film = new Film();
@@ -205,7 +203,7 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 			stmt.setDouble(6, film.getRantalRate());
 //			stmt.setInt(7, film.getLength());
 			stmt.setInt(7, 99);
-			
+
 			stmt.setDouble(8, film.getReplacementCost());
 			stmt.setString(9, film.getRating());
 			stmt.setString(10, film.getSpecialFeatures());
@@ -229,6 +227,7 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 
 		return film;
 	}
+
 	
 	//========================================deleteFilm() Method Added==============================================
 		public boolean deleteFilm(Film film) {
@@ -257,6 +256,57 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 			}
 			return true;
 		}
+
+
+	@Override
+	public boolean updateFilm(Film film, int filmId) {
+		Connection conn = null;
+		try {
+			conn = DriverManager.getConnection(URL, user, pass);
+			String sql = "UPDATE film SET title=?, description=?, release_year=?, language_id=?, rental_duration=?, length=?, replacement_cost=?, rating=?, special_features=? WHERE id=?";
+			conn.setAutoCommit(false);
+			PreparedStatement stmt = conn.prepareStatement(sql);
+
+			stmt.setString(1, film.getTitle());
+			stmt.setString(2, film.getDescription());
+			stmt.setInt(3, film.getReleaseYear());
+			stmt.setInt(4, film.getLanguageID());
+			stmt.setInt(5, film.getRentalDuration());
+//			stmt.setInt(6, film.getLength());
+			stmt.setInt(6, 99);
+			stmt.setDouble(7, film.getReplacementCost());
+			stmt.setString(8, film.getRating());
+			stmt.setString(9, film.getSpecialFeatures());
+			stmt.setInt(10, filmId);
+
+			System.out.println(stmt);
+			int updateCount = stmt.executeUpdate();
+			if (updateCount == 0) {
+				return false;
+			}
+
+			conn.commit();
+			stmt.close();
+			conn.close();
+
+		} catch (SQLException sqle) {
+			sqle.printStackTrace();
+			if (conn != null) {
+				try {
+					conn.rollback();
+				} catch (SQLException sqle2) {
+					System.err.println("Error trying to rollback");
+
+				}
+
+			}
+
+			throw new RuntimeException("Error updating film " + film.getTitle());
+		}
+
+		return true;
+
+	}
 
 //======================================================================================================================
 	static {
