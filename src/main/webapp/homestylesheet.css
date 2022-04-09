@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body {
+	background-color: #F6F6F6;
+	color: black;
+	text-align: center;
+}
+
+p {
+	font-family: 'Petrona', serif;
+	font-family: 'Playfair Display', serif;
+	font-size: 24px;
+	letter-spacing: 2px;
+	background-color: #F6F6F6;
+}
+
+#reel {
+	height: 1000px;
+	align-self: left;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+	padding-right: 0;
+	padding-left: 0;
+	text-align: center;
+	background-color: #F6F6F6;
+	text-align: center;
+}
+
+#menu {
+	padding-top: 200px;
+	justify-content: center;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	font-size: 35px;
+	text-align: center;
+}
+
+a:hover {
+	color: red;
+	text-decoration: underline;
+}
