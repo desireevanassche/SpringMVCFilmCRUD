@@ -20,6 +20,6 @@
 		</div>
 		<div class="col" id="menu">
 			<img id="reel"
-				src=https://media.istockphoto.com/photos/book-and-glass-loupe-picture-id133313561?s=612x612>
+				src=https://images.pexels.com/photos/6661040/pexels-photo-6661040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1>
 </body>
 </html>
