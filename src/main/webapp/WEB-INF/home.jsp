@@ -34,6 +34,7 @@
 				charset="utf-8"></script>
 		</div>
 		<div class="col" id="menu">
+		
 			<div id="row1">
 				<a href="filmbyid.jsp">Find Film By ID</a>
 			</div>
@@ -46,6 +47,17 @@
 			<div id="row4">
 				<a href="updatefilm.jsp">Update a Film</a>
 			</div>
+	
+			<a href="filmbyid.jsp">Find Film By ID</a> <br> <a
+				href="filmbykey.jsp">Find Film By Keyword</a> <br> <a
+
+				href="createfilm.jsp">Create a New Film</a> <br> <a
+				href="deletefilm.jsp">Delete a Film</a> <br><a
+				
+
+				
+				href="updatefilm.jsp">Update a Film</a> <br>
+
 		</div>
 	</div>
 	</div>

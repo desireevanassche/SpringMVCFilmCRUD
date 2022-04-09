@@ -53,6 +53,31 @@ public class FilmController {
 		return mv;
 		
 	}
+		
+		@RequestMapping(path = "deletefilm.do", method = RequestMethod.POST)
+		public ModelAndView deleteFilm( Film film) {
+			System.out.println(film);
+			ModelAndView mv = new ModelAndView();
+			
+			//boolean newFilm = filmDao.deleteFilm(film);
+			
+			
+			boolean success = filmDao.deleteFilm(film);
+
+			if (success) {
+				mv.setViewName("WEB-INF/success.jsp");
+				return mv;
+			} else {
+				mv.setViewName("WEB-INF/deletefail.jsp");
+				return mv;
+			}
+			
+			//mv.addObject("film", newFilm);
+			//mv.setViewName("WEB-INF/result.jsp");
+			//return mv;	
+	}
+	
+
 	
 	@RequestMapping(path = "updatefilm.do", method = RequestMethod.POST)
 	public ModelAndView updatefilm( Film film, @RequestParam("filmId") String filmId) {
@@ -63,4 +88,5 @@ public class FilmController {
 		return mv;
 		
 	}
+
 }
