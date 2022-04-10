@@ -51,7 +51,7 @@
 	<c:choose>
 		<c:when test="${! empty film}">
 			<ul id="resultList">
-				<h3>Film created:</h3>
+				<h3>Film Created / Edited:</h3>
 				<li>Film ID: ${film.id}</li>
 				<li>Title: ${film.title}</li>
 				<li>Description: ${film.description}</li>

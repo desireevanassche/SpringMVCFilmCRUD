@@ -29,7 +29,7 @@
 
 		<div class="row no-gutters">
 		<div class="col" id="keywordLeft">
-		<img id="keyPhoto" img src="https://live.staticflickr.com/65535/51994527521_8a97aa4559_z.jpg alt="theater">
+		<img id="keyPhoto" img src="https://live.staticflickr.com/65535/51994646096_b64ac6bc27_z.jpg">
 		</div>
 		
 		
