@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.skilldistillery.mvcfilmsite.data.FilmDAO;
 import com.skilldistillery.mvcfilmsite.entities.Film;
+import com.skilldistillery.mvcfilmsite.entities.FilmCategory;
 
 @Controller
 public class FilmController {
@@ -28,6 +29,14 @@ public class FilmController {
 		ModelAndView mv = new ModelAndView();
 		Film s = filmDao.findFilmById(filmId);
 		mv.addObject("film", s);
+		mv.setViewName("WEB-INF/result.jsp");
+		return mv;
+	}
+	@RequestMapping(path = "filmbyid.do", params = "id", method = RequestMethod.GET)
+	public ModelAndView  findFilmCategories(@RequestParam("id") int filmId) {
+		ModelAndView mv = new ModelAndView();
+		FilmCategory category = filmDao.findFilmCategories(filmId);
+		mv.addObject("film", category);
 		mv.setViewName("WEB-INF/result.jsp");
 		return mv;
 	}
@@ -81,10 +90,11 @@ public class FilmController {
 	
 	@RequestMapping(path = "updatefilm.do", method = RequestMethod.POST)
 	public ModelAndView updatefilm( Film film, @RequestParam("filmId") String filmId) {
+//	public ModelAndView updatefilm( Film film, @RequestParam("filmId")) {
 		ModelAndView mv = new ModelAndView();
-		System.out.println(filmId);
-		filmDao.updateFilm(film, Integer.parseInt(filmId));
-		mv.setViewName("WEB-INF/result.jsp");
+		Film newFilm = filmDao.updateFilm(film, Integer.parseInt(filmId));
+		mv.addObject("film", newFilm);
+		mv.setViewName("WEB-INF/film-updated.jsp");
 		return mv;
 		
 	}

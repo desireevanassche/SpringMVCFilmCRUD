@@ -3,6 +3,7 @@ package com.skilldistillery.mvcfilmsite.data;
 import java.util.List;
 
 import com.skilldistillery.mvcfilmsite.entities.Film;
+import com.skilldistillery.mvcfilmsite.entities.FilmCategory;
 import com.skilldistillery.mvcfilmsite.entities.Actor;
 
 public interface FilmDAO {
@@ -22,7 +23,9 @@ public interface FilmDAO {
 
 	public boolean deleteFilm(Film film);
 
-	public boolean updateFilm(Film film, int filmid);
+	public Film updateFilm(Film film, int filmid);
+	
+	public FilmCategory findFilmCategories(int filmId);
 
 
 }
