@@ -46,7 +46,9 @@
 				<a href="updatefilm.jsp">Update a Film</a>
 			</div>
 			
-
+			<div id="row5">
+				<a href="deletefilm.jsp">Delete a Film</a>
+			</div>
 	</div>
 	</div>
 	</div>
