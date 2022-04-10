@@ -20,6 +20,13 @@
 				<li>Description: ${film.description}</li>
 				<li>Release Year: ${film.releaseYear}</li>
 				<li>Language: ${film.language}</li>
+				
+				<li>Cast: </li>
+				<c:forEach var="a" items="${film.actors}">
+				<ul>
+					<li>${a.firstName} ${a.lastName}</li>
+				</ul>
+				</c:forEach>
 				<li><a href="updatefilm.jsp">Edit Film</a>
 			</ul>
 		</c:when>
@@ -33,7 +40,14 @@
 					<li>Description: ${f.description}</li>
 					<li>Release Year: ${f.releaseYear}</li>
 					<li>Language: ${f.language}</li>
-				</c:forEach>
+					
+					<li>Cast: </li>
+					<c:forEach var="a" items="${f.actors}">
+					<ul>
+						<li>${a.firstName} ${a.lastName}</li>
+					</ul>
+					</c:forEach>
+					</c:forEach>
 			</ul>
 		</c:when>
 		<c:otherwise>
