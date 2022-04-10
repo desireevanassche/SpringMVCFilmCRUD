@@ -29,7 +29,7 @@
 		<div class="col" id="menu">
 		<p id="keyHead">Find Film By Keyword</p>
 			<form action="filmbykey.do" method="GET">
-				Keyword: <input type="text" name="keyword" /> <input type="submit"
+				<input type="text" name="keyword" /> <input type="submit"
 					value="Get Film Data" />
 			</form>
 			

@@ -47,7 +47,7 @@ home {
 	font-family: 'Spectral', serif;
 }
 
-#menu, #keywordGrid {
+#menu, #keywordGrid, #searchId {
 	padding-top: 200px;
 	justify-content: center;
 	font-family: 'Spectral', serif;
@@ -67,8 +67,8 @@ a:hover {
 	text-decoration: none;
 }
 
-#keyHead {
+#keyHead, #idHead {
 	font-size: 35px;
-	padding-top: 100px;
-	padding-bottom: 120px;
+	padding-top: 50px;
+	padding-bottom: 15px;
 }

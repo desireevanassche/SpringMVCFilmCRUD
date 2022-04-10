@@ -17,6 +17,8 @@
 
 <link href="homestylesheet.css" type="text/css" rel="stylesheet" />
 
+
+
 </head>
 
 <body>
@@ -46,16 +48,11 @@
 				<a href="updatefilm.jsp">Update a Film</a>
 			</div>
 			
-			<a href="home.jsp">Back To Main Menu</a>
-	
-			
 
-		</div>
 	</div>
 	</div>
 	</div>
-
-
+	</div>
 
 
 </body>
