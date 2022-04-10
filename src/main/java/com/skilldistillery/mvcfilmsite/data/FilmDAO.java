@@ -22,7 +22,7 @@ public interface FilmDAO {
 
 	public boolean deleteFilm(Film film);
 
-	public boolean updateFilm(Film film, int filmid);
+	public Film updateFilm(Film film, int filmid);
 
 
 }

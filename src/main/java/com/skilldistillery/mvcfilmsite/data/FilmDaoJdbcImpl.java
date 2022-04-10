@@ -260,7 +260,7 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 
 
 	@Override
-	public boolean updateFilm(Film film, int filmId) {
+	public Film updateFilm(Film film, int filmId) {
 		Connection conn = null;
 		try {
 			conn = DriverManager.getConnection(URL, user, pass);
@@ -283,7 +283,7 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 			System.out.println(stmt);
 			int updateCount = stmt.executeUpdate();
 			if (updateCount == 0) {
-				return false;
+				return film;
 			}
 
 			conn.commit();
@@ -305,7 +305,7 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 			throw new RuntimeException("Error updating film " + film.getTitle());
 		}
 
-		return true;
+		return film;
 
 	}
 
