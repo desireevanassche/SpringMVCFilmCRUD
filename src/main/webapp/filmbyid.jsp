@@ -27,7 +27,7 @@
 		<div class="col" id="searchId">
 		<p id="idHead">Find Film By ID</p>
 		<form action="filmbyid.do" method="GET">
-		<input type="text" name="id" /> <input type="submit"
+		<input type="text" name="id" placeholder="Please Enter ID" /> <input type="submit"
 					value="Get Film Data" />
 			</form>
 			
