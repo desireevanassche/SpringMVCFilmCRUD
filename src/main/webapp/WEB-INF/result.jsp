@@ -65,22 +65,25 @@
 					<li>${a.firstName} ${a.lastName}</li>
 				</ul>
 				</c:forEach>
-				<li><a href="updatefilm.jsp">Edit Film</a>
+				<!-- <li><a href="updatefilm.jsp">Edit Film</a> -->
 			</ul>
 		</c:when>
 
 		<c:when test="${! empty films}">
 			<ul>
+					<h3>Here is what we found:</h3>
 				<c:forEach var="f" items="${films}">
-					<h3>Film found:</h3>
-					<li>Film ID: ${f.id}</li>
+				<br>
+				<h4>Film:</h4>
 					<li>Title: ${f.title}</li>
 					<li>Description: ${f.description}</li>
 					<li>Release Year: ${f.releaseYear}</li>
 					<li>Rating: ${f.rating}</li>
 					<li>Language: ${f.language}</li>
+					<li>Film ID: ${f.id}</li>
+					<br>
 					
-					<li>Cast: </li>
+					<h5>Cast: </h5>
 					<c:forEach var="a" items="${f.actors}">
 					<ul>
 						<li>${a.firstName} ${a.lastName}</li>
@@ -88,6 +91,7 @@
 					</c:forEach>
 					</c:forEach>
 			</ul>
+					<br>
 		</c:when>
 		<c:otherwise>
 			<p>No film found</p>
