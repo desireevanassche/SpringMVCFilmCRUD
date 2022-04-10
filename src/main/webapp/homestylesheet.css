@@ -9,7 +9,7 @@ body {
 
 p {
 	font-family: 'Spectral', serif;
-	font-size: 24px;
+	font-size: 18px;
 	letter-spacing: 2px;
 	background-color: #F6F6F6;
 }
@@ -71,4 +71,13 @@ a:hover {
 	font-size: 35px;
 	padding-top: 50px;
 	padding-bottom: 15px;
+}
+
+.nav-link {
+	font-size: 18px;
+}
+
+#navigationLocation {
+	padding-top: 175px;;
+	
 }
