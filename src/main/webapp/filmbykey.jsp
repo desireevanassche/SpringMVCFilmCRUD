@@ -23,13 +23,13 @@
 
 		<div class="row no-gutters">
 		<div class="col" id="keywordLeft">
-		<img id="keyPhoto" src="https://live.staticflickr.com/65535/51993614098_d1c76fe07e_z.jpg" width="640" height="640" alt="search">
+		<img id="keyPhoto" src="https://live.staticflickr.com/65535/51994568613_7905851c92_z.jpg" alt="Movie Mania">
 		</div>
 		
 		<div class="col" id="menu">
 		<p id="keyHead">Find Film By Keyword</p>
 			<form action="filmbykey.do" method="GET">
-				<input type="text" name="keyword" placeholder="Please Enter Keyword" /> <input type="submit"
+				<input type="text" name="keyword" placeholder="Please Enter a Keyword" /> <input type="submit"
 					value="Get Film Data" />
 			</form>
 			

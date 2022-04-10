@@ -19,18 +19,34 @@
 
 <link href="homestylesheet.css" type="text/css" rel="stylesheet" />
 </head>
-<body>
-	<h1>Delete a film</h1>
 
-	<form action="deletefilm.do" method="POST">
 
-		<label for="id">ID: </label> <input type="text" name="id">
 
-		<input type="submit" value="delete" />
 
-	</form>
 
-		 <nav class="navbar navbar-expand-lg navbar-light" id="navDesign">
+	<body>
+
+
+		<div class="row no-gutters">
+		<div class="col" id="keywordLeft">
+		<img id="keyPhoto" img src="https://live.staticflickr.com/65535/51994527521_8a97aa4559_z.jpg alt="theater">
+		</div>
+		
+		
+		<div class="col" id="menu">
+      <p id="keyHead">Delete a Film</p>
+      <form action="deletefilm.do" method="POST">
+
+      		<label for="id"></label> <input type="text" name="id" placeholder="Please Enter an ID">
+
+      		<input type="submit" value="delete"/>
+
+      	</form>
+    
+			
+			<div id="navigationLocation">
+			
+			 <nav class="navbar navbar-expand-lg navbar-light" id="navDesign">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -56,5 +72,10 @@
       </ul>
     </div>
   </nav>
-</body>
-</html>
+			</div>
+			
+		</div>
+	</div>
+	</div>
+	</div>
+		
