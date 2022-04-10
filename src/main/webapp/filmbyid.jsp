@@ -21,7 +21,7 @@
 
 <div class="row no-gutters">
 		<div class="col" id="idimageleft">
-		<img id="idPhoto" src=https://images.pexels.com/photos/7319158/pexels-photo-7319158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1>
+		<img id="idPhoto" img src="https://live.staticflickr.com/65535/51992538777_81f4787808_z.jpg" width="640" height="640" alt="movie_theater">
 		</div>
 		
 		<div class="col" id="searchId">
@@ -31,12 +31,43 @@
 					value="Get Film Data" />
 			</form>
 			
+			<div id="navigationLocation">
+			
+			 <nav class="navbar navbar-expand-lg navbar-light" id="navDesign">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+       
+        <li class="nav-item acticve">
+          <a class="nav-link" href="filmbykey.jsp">Keyword Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="filmbyid.jsp">ID Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="createfilm.jsp">Add Film</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="updatefilm.jsp">Edit Film</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="deletefilm.jsp">Delete Film</a>
+        </li>
+     
+      </ul>
+    </div>
+  </nav>
+			</div>
 			
 		</div>
 	</div>
 	</div>
 	</div>
 	
+	
+	 
 	
 	
 

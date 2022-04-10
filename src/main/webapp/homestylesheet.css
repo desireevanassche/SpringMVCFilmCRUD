@@ -4,12 +4,17 @@ body {
 	font-family: 'Spectral', serif;
 	background-color: #F6F6F6;
 	color: black;
-	text-align: center;
+}
+#resultList, li, ul {
+	padding-top: 25px;
+	text-align: left;
+	font-family: 'Spectral', serif;
+	font-size: 18px;
 }
 
 p {
-	font-family: 'Spectral', serif;
-	font-size: 24px;
+	
+	font-size: 18px;
 	letter-spacing: 2px;
 	background-color: #F6F6F6;
 }
@@ -21,6 +26,10 @@ home {
 #keyPhoto, idimageleft {
 	height: 700px;
 	width: 700px;
+}
+
+#deleteLeft {
+	width: 600px;
 }
 
 .row1, .row2, .row3, .row4 {
@@ -47,7 +56,7 @@ home {
 	font-family: 'Spectral', serif;
 }
 
-#menu, #keywordGrid, #searchId {
+#menu, #keywordGrid, #searchId, #deletemenu {
 	padding-top: 200px;
 	justify-content: center;
 	font-family: 'Spectral', serif;
@@ -72,3 +81,16 @@ a:hover {
 	padding-top: 50px;
 	padding-bottom: 15px;
 }
+
+.nav-link {
+	font-size: 18px;
+}
+
+#navigationLocation {
+	padding-top: 175px;;
+	
+}
+
+
+
+

@@ -23,6 +23,7 @@
 
 </head>
 <body>
+
 	<% String passedFilmId = request.getParameter("filmId"); %>
 	<% String passedTitle = request.getParameter("filmTitle"); %>
 	<% String passedDescription = request.getParameter("filmDescription"); %>
@@ -61,6 +62,76 @@
 
 	</form>
 
+
+
+		<div class="row no-gutters">
+		<div class="col" id="keywordLeft">
+		<img id="keyPhoto" src="https://live.staticflickr.com/65535/51994660701_e982a349a0_z.jpg" alt="theater">
+		</div>
+
+		<div class="col" id="menu">
+
+
+      <h1>Update Film</h1><br>
+
+      	<form action="updatefilm.do" method="POST">
+
+      		<label for="filmId"><strong>Editing Film ID:
+      				${film.id }</strong> </label> <input type="text"
+      			name="filmId"> <label for="title">Title: </label> <input
+      			type="text" name="title"><br> <label for="description">Description:
+      		</label> <input type="text" name="description"> <label
+      			for="releaseYear">Release Year: </label> <input type="text"
+      			name="releaseYear"> <br> <label for="languageID">Language
+      			ID: </label> <select name="languageID" id="languageID">
+      			<option value="1">1 English</option>
+      			<option value="2">2 Italian</option>
+      			<option value="3">3 Japanese</option>
+      			<option value="4">4 Mandarin</option>
+      			<option value="5">5 French</option>
+      		</select> <label for="rating">Rating: </label> <select
+      			name="rating">
+      			<option value="G">G</option>
+      			<option value="PG">PG</option>
+      			<option value="R">R</option>
+      			<option value="NC17">NC17</option>
+      		</select> <br> <input type="submit" value="Submit Changes" />
+
+      	</form>
+
+
+				<div id="navigationLocation">
+
+			 <nav class="navbar navbar-expand-lg navbar-light" id="navDesign">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+
+        <li class="nav-item acticve">
+          <a class="nav-link" href="filmbykey.jsp">Keyword Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="filmbyid.jsp">ID Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="createfilm.jsp">Add Film</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="updatefilm.jsp">Edit Film</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="deletefilm.jsp">Delete Film</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+			</div>
+
+		</div>
+	</div>
 
 </body>
 </html>
