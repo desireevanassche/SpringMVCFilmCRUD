@@ -14,7 +14,7 @@
 	<c:choose>
 		<c:when test="${! empty film}">
 			<ul>
-				<h3>Film created:</h3>
+				<h3>Film updated:</h3>
 				<li>Film ID: ${film.id}</li>
 				<li>Title: ${film.title}</li>
 				<li>Description: ${film.description}</li>
@@ -24,20 +24,8 @@
 			</ul>
 		</c:when>
 
-		<c:when test="${! empty films}">
-			<ul>
-				<c:forEach var="f" items="${films}">
-					<h3>Film found:</h3>
-					<li>Film ID: ${f.id}</li>
-					<li>Title: ${f.title}</li>
-					<li>Description: ${f.description}</li>
-					<li>Release Year: ${f.releaseYear}</li>
-					<li>Language: ${f.language}</li>
-				</c:forEach>
-			</ul>
-		</c:when>
 		<c:otherwise>
-			<p>No film found</p>
+			<p>No film updated</p>
 		</c:otherwise>
 
 	
