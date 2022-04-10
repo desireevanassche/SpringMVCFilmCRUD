@@ -49,6 +49,7 @@
   </nav>
 
 	<c:choose>
+		
 		<c:when test="${! empty film}">
 			<ul id="resultList">
 				<h3>Film Created / Edited:</h3>
