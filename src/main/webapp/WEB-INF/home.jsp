@@ -62,7 +62,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
        
-        <li class="nav-item acticve">
+        <li class="nav-item">
+          <a class="nav-link" href=${pageContext.request.contextPath}>Home</a>
+        </li>
+        <li class="nav-item active">
           <a class="nav-link" href="filmbykey.jsp">Keyword Search</a>
         </li>
         <li class="nav-item">

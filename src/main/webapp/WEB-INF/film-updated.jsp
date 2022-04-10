@@ -15,11 +15,9 @@
 		<c:when test="${! empty film}">
 			<ul>
 				<h3>Film updated:</h3>
-				<li>Film ID: ${film.id}</li>
 				<li>Title: ${film.title}</li>
 				<li>Description: ${film.description}</li>
 				<li>Release Year: ${film.releaseYear}</li>
-				<li>Language: ${film.language}</li>
 				
 			</ul>
 		</c:when>
@@ -28,19 +26,10 @@
 			<p>No film updated</p>
 		</c:otherwise>
 
-	
 	</c:choose>
+	<a href=${pageContext.request.contextPath}>Home</a>
 	
-		<form action="updatefilm.jsp" method="GET">
-	
-			<input type="hidden" name="filmId" value="${film.id}" /> 
-			<input type="hidden" name="filmTitle" value="${film.title}" /> 
-			<input type="hidden" name="filmDescription" value="${film.description}" /> 
-			<input type="hidden" name="filmLanguageId" value="${film.language}" /> 
-			<input type="hidden" name="filmReleaseYear" value="${film.releaseYear}" /> 
-			<input type="hidden" name="filmRating" value="${film.rating}" /> 
-			<input type="submit" value="Edit Film Data" />
-		</form>
+
 
 </body>
 </html>
