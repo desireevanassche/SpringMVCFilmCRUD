@@ -13,9 +13,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
 
 <link href="homestylesheet.css" type="text/css" rel="stylesheet" />
 
@@ -47,16 +45,10 @@
 			<div id="row4">
 				<a href="updatefilm.jsp">Update a Film</a>
 			</div>
+			
+			<a href="home.jsp">Back To Main Menu</a>
 	
-			<a href="filmbyid.jsp">Find Film By ID</a> <br> <a
-				href="filmbykey.jsp">Find Film By Keyword</a> <br> <a
-
-				href="createfilm.jsp">Create a New Film</a> <br> <a
-				href="deletefilm.jsp">Delete a Film</a> <br><a
-				
-
-				
-				href="updatefilm.jsp">Update a Film</a> <br>
+			
 
 		</div>
 	</div>

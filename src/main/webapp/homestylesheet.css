@@ -18,7 +18,7 @@ home {
 	font-size: 18px;
 }
 
-#keyPhoto {
+#keyPhoto, idimageleft {
 	height: 700px;
 	width: 700px;
 }
@@ -27,7 +27,7 @@ home {
 	padding-top: 20px;
 }
 
-#reel, #keywordLeft {
+#reel, #keywordLeft, #idimageleft {
 	height: 700px;
 	width: 700px;
 	align-self: left;
