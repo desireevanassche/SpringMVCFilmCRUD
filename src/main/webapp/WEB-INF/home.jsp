@@ -42,10 +42,8 @@
 			<div id="row3">
 				<a href="createfilm.jsp">Create a New Film</a>
 			</div>
+
 			<div id="row4">
-				<a href="updatefilm.jsp">Update a Film</a>
-			</div>
-			<div id="row5">
 				<a href="deletefilm.jsp">Delete a Film</a>
 			</div>
 		
@@ -74,9 +72,7 @@
         <li class="nav-item">
           <a class="nav-link" href="createfilm.jsp">Add Film</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="updatefilm.jsp">Edit Film</a>
-        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="deletefilm.jsp">Delete Film</a>
         </li>

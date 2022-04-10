@@ -130,8 +130,7 @@
 									Search</a></li>
 							<li class="nav-item"><a class="nav-link"
 								href="createfilm.jsp">Add Film</a></li>
-							<li class="nav-item"><a class="nav-link"
-								href="updatefilm.jsp">Edit Film</a></li>
+
 							<li class="nav-item"><a class="nav-link"
 								href="deletefilm.jsp">Delete Film</a></li>
 
