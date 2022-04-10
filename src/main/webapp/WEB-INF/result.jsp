@@ -19,6 +19,7 @@
 				<li>Title: ${film.title}</li>
 				<li>Description: ${film.description}</li>
 				<li>Release Year: ${film.releaseYear}</li>
+				<li>Language: ${film.language}</li>
 				<li><a href="updatefilm.jsp">Edit Film</a>
 			</ul>
 		</c:when>
@@ -31,6 +32,7 @@
 					<li>Title: ${f.title}</li>
 					<li>Description: ${f.description}</li>
 					<li>Release Year: ${f.releaseYear}</li>
+					<li>Language: ${f.language}</li>
 				</c:forEach>
 			</ul>
 		</c:when>
