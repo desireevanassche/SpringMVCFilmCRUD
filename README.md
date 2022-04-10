@@ -3,14 +3,19 @@
 ### Description
 
 SpringMVCFilmCRUD is a web app which prompts the user to choose from a menu option including:
+
 Find Film By ID
+
 Find Film By Keyword
+
 Create a New Film
+
 Update a Film
+
 Delete a Film
 
 If user chooses "Find Film By ID", then a new page will open and prompt the user to enter a Film's ID, and click on "Get Film Data" submit button. This will open another page and user can see the details of the film in the new web page. If the film is not found, they see the message "No film found!" in the new web page.
 
 If user chooses "Find film by keyword" then a new page will open and prompt the user to enter a search keyword, and click on "Get Film Data" submit button. This will open another page and user can see the details of the film in the new web page. If the film is not found, they see the message "No film found!" in the new web page.
 
-User can choose to add a new film by choosing "Create a New Film" in the option menu. In a new page, they can enter the properties of the film including "Title", "Description", "Release Year", "Language" and "Rating". User's input will be used to create a new Film object. Clicking on "Add Film" submit button will open another page and user can see the details of the film they created in the new web page. 
+User can choose to add a new film by choosing "Create a New Film" in the option menu. In a new page, they can enter the properties of the film including "Title", "Description", "Release Year", "Language" and "Rating". User's input will be used to create a new Film object. Clicking on "Add Film" submit button will open another page and user can see the details of the film they created in the new web page.
