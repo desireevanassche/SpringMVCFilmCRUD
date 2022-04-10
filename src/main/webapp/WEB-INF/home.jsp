@@ -17,8 +17,6 @@
 
 <link href="homestylesheet.css" type="text/css" rel="stylesheet" />
 
-
-
 </head>
 
 <body>
@@ -43,14 +41,11 @@
 				<a href="createfilm.jsp">Create a New Film</a>
 			</div>
 
-			<div id="row4">
-				<a href="deletefilm.jsp">Delete a Film</a>
-			</div>
+
 		
 	</div>
 	</div>
-	</div>
-	</div>
+
 
   <nav class="navbar navbar-expand-lg navbar-light" id="navDesign">
     <a class="navbar-brand" href="#">Movie Mania </a>
@@ -73,9 +68,6 @@
           <a class="nav-link" href="createfilm.jsp">Add Film</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="deletefilm.jsp">Delete Film</a>
-        </li>
      
       </ul>
     </div>

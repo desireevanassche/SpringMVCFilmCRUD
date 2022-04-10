@@ -43,7 +43,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
        
-        <li class="nav-item acticve">
+        <li class="nav-item active">
+        		<li class="nav-item"><a class="nav-link"
+				href=${pageContext.request.contextPath}>Home</a></li>
+		<li>
           <a class="nav-link" href="filmbykey.jsp">Keyword Search</a>
         </li>
         <li class="nav-item">
@@ -52,12 +55,8 @@
         <li class="nav-item">
           <a class="nav-link" href="createfilm.jsp">Add Film</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="updatefilm.jsp">Edit Film</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="deletefilm.jsp">Delete Film</a>
-        </li>
+
+
      
       </ul>
     </div>
