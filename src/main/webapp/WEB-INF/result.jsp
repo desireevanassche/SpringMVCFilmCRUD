@@ -56,6 +56,7 @@
 				<li>Title: ${film.title}</li>
 				<li>Description: ${film.description}</li>
 				<li>Release Year: ${film.releaseYear}</li>
+				<li>Rating: ${film.rating}</li>
 				<li>Language: ${film.language}</li>
 				
 				<li>Cast: </li>
@@ -76,6 +77,7 @@
 					<li>Title: ${f.title}</li>
 					<li>Description: ${f.description}</li>
 					<li>Release Year: ${f.releaseYear}</li>
+					<li>Rating: ${f.rating}</li>
 					<li>Language: ${f.language}</li>
 					
 					<li>Cast: </li>
