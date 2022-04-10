@@ -65,6 +65,13 @@
 						name="filmRating" value="${film.rating}" /> <input type="submit"
 						value="Edit Film Data" />
 				</form>
+				
+				<form action="deletefilm.do" method="POST">
+					<input type="hidden" name="id" value="${film.id}" /> <input
+						type="hidden" name="filmTitle" value="${film.title}" /> 
+						 <input type="submit"
+						value="Delete Film" />
+				</form>
 
 
 
@@ -101,6 +108,14 @@
 							name="filmRating" value="${f.rating}" /> <input type="submit"
 							value="Edit Film Data" />
 					</form>
+					
+					
+					<form action="deletefilm.do" method="POST">
+					<input type="hidden" name="id" value="${f.id}" /> <input
+						type="hidden" name="filmTitle" value="${f.title}" /> 
+						 <input type="submit"
+						value="Delete Film" />
+				</form>
 
 
 					<li>Film ID: ${f.id}</li>
