@@ -20,10 +20,14 @@ If the user choose to delete the film, it is removed from the database and a new
 
 ### Lesson Learned
 
+**Concepts over Syntax**
 This project helped us understand more about Controllers (relational mapping/the data pattern itself) actually pass/receive data from the form actions and how that data ultimately is presented in the View.
 Concepts where we've done lots of examples went fine though like JDBC (created the connection, Prepared Statement, and Exception Handling).
 We learned how the CRUD methods are made. We learned more about syntax early on, and understood how the ModelAndView worked in concept. We learned how to add the Objects to the MV instance correctly.
 Our examples thus far were "@RequestParam" examples where we took things like "keyword" as a String directly from the form just to GET/query to database. So when we had to 'create/post' stuff it took us a good while to let the Controller only worry about the ModelAndView and forward the form field to object work to the JDBCImpl.
+
+**Small mistakes make for big Errors**
+When creating the method to create a film as well as delete a film we found getting the the smallest mistake could really sabotage our program in a big way. For the create a film function we kept seeing this error that indicated that the parameters that the select statement took from the user were not being accepted. We find a small report on the html instead of using name for two parameters, we used id. Excited to be done with this bug we ran the program again to once again see the same error. We tried adjusting the parameters to no avail and finally with the help of another couple sets of eyes we saw it, a missing parenthesis was creating a huge errors in our program. The closing parentheses on the select statement was just outside of our view. Once we resolved those issues we had functioning code that was able to accept input and create a data base item that could be edited, or deleted.
 
 
 ### Technology Used
