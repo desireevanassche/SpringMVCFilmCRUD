@@ -105,7 +105,7 @@
 					<h3>Here is what we found:</h3>
 				<c:forEach var="f" items="${films}">
 				<br>
-					<h4>Film:</h4>
+					<%-- <h4>Film:</h4>
 					<li>Film ID: ${f.id}</li>
 					<li>Title: ${f.title}</li>
 					<li>Description: ${f.description}</li>
@@ -114,8 +114,8 @@
 					<li>Category: ${film.category} </li>
 			<!--	<c:out value="${film.category}"/> -->
 
-					<li>Language: ${f.language}</li>
-					<li>Film ID: ${f.id}</li>
+					<li>Language: ${f.language}</li> --%>
+					<%-- <li>Film ID: ${f.id}</li> --%>
 					<br>
 								<form action="updatefilm.jsp" method="GET">
 						<input type="hidden" name="filmId" value="${f.id}" /> 
@@ -136,18 +136,18 @@
 				</form>
 		<br>
 
-<%-- 
+
 					<li>Film ID: ${f.id}</li>
 					<li>Title: ${f.title}</li>
 					<li>Description: ${f.description}</li>
 					<li>Release Year: ${f.releaseYear}</li>
 					<li>Rating: ${f.rating}</li>
-				<li>Category: ${film.category} </li>
+				<li>Category: ${f.category} </li>
 			<!--	<c:out value="${film.category}"/> -->
 
 					<li>Language: ${f.language}</li>
 					<li>Film ID: ${f.id}</li>
-					<br> --%>
+					<br>
 					
 					
 					<li>Cast:</li>
