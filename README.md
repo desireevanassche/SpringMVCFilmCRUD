@@ -22,7 +22,7 @@ If the user choose to delete the film, it is removed from the database and a new
 
 This project helped us understand more about Controllers (relational mapping/the data pattern itself) actually pass/receive data from the form actions and how that data ultimately is presented in the View.
 Concepts where we've done lots of examples went fine though like JDBC (created the connection, Prepared Statement, and Exception Handling).
-We learned how the CRUD methods are made. We learned more about syntax early on, and understood how the ModelAndView worked in concept. We learned how to add the Objects to the MV instance correctly
+We learned how the CRUD methods are made. We learned more about syntax early on, and understood how the ModelAndView worked in concept. We learned how to add the Objects to the MV instance correctly.
 Our examples thus far were "@RequestParam" examples where we took things like "keyword" as a String directly from the form just to GET/query to database. So when we had to 'create/post' stuff it took us a good while to let the Controller only worry about the ModelAndView and forward the form field to object work to the JDBCImpl.
 
 
