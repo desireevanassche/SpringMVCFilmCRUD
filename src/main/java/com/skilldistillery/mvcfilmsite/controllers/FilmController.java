@@ -11,7 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.skilldistillery.mvcfilmsite.data.FilmDAO;
 import com.skilldistillery.mvcfilmsite.entities.Film;
-import com.skilldistillery.mvcfilmsite.entities.FilmCategory;
 
 @Controller
 public class FilmController {
@@ -32,14 +31,7 @@ public class FilmController {
 		mv.setViewName("WEB-INF/result.jsp");
 		return mv;
 	}
-	@RequestMapping(path = "filmbyid.do", params = "id", method = RequestMethod.GET)
-	public ModelAndView  findFilmCategories(@RequestParam("id") int filmId) {
-		ModelAndView mv = new ModelAndView();
-		FilmCategory category = filmDao.findFilmCategories(filmId);
-		mv.addObject("film", category);
-		mv.setViewName("WEB-INF/result.jsp");
-		return mv;
-	}
+	
 
 	@RequestMapping(path = "filmbykey.do", params = "keyword", method = RequestMethod.GET)
 	public ModelAndView home(@RequestParam("keyword") String keyword) {

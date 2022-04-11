@@ -12,7 +12,6 @@ import java.util.Locale.Category;
 
 import com.skilldistillery.mvcfilmsite.entities.Actor;
 import com.skilldistillery.mvcfilmsite.entities.Film;
-import com.skilldistillery.mvcfilmsite.entities.FilmCategory;
 
 public class FilmDaoJdbcImpl implements FilmDAO {
 	private static final String URL = "jdbc:mysql://localhost:3306/sdvid?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=US/Mountain";
@@ -48,6 +47,7 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 				film.setSpecialFeatures(rs.getString("special_features"));
 				film.setLanguage(findLanguageByFilmId(film.getId()));
 				film.setActors(findActorsByFilmId(filmId));
+				film.setCategory(findFilmCategories(filmId));
 			}
 			rs.close();
 			stmt.close();
@@ -88,6 +88,7 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 				film.setSpecialFeatures(rs.getString("special_features"));
 				film.setActors(findActorsByFilmId(film.getId()));
 				film.setLanguage(findLanguageByFilmId(film.getId()));
+				film.setCategory(findFilmCategories(film.getId()));
 				films.add(film);
 			}
 			rs.close();
@@ -210,7 +211,6 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 			stmt.setDouble(8, film.getReplacementCost());
 			stmt.setString(9, film.getRating());
 			stmt.setString(10, film.getSpecialFeatures());
-
 			System.out.println(stmt);
 			int updateCount = stmt.executeUpdate();
 			if (updateCount == 1) {
@@ -231,34 +231,33 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 		return film;
 	}
 
-	@Override	
+	@Override
 	public boolean deleteFilm(Film film) {
-			Connection conn = null;
-			try {
-				conn = DriverManager.getConnection(URL, user, pass);
-				
-				conn.setAutoCommit(false); // START TRANSACTION
-				
-				String sql = "DELETE FROM film WHERE id = ?";
-				PreparedStatement stmt = conn.prepareStatement(sql);
-				stmt.setInt(1, film.getId());
-				int updateCount = stmt.executeUpdate();
-				
-				conn.commit(); // COMMIT TRANSACTION
-			} catch (SQLException sqle) {
-				sqle.printStackTrace();
-				if (conn != null) {
-					try {
-						conn.rollback();
-					} catch (SQLException sqle2) {
-						System.err.println("Error trying to rollback");
-					}
-				}
-				return false;
-			}
-			return true;
-		}
+		Connection conn = null;
+		try {
+			conn = DriverManager.getConnection(URL, user, pass);
 
+			conn.setAutoCommit(false); // START TRANSACTION
+
+			String sql = "DELETE FROM film WHERE id = ?";
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setInt(1, film.getId());
+			int updateCount = stmt.executeUpdate();
+
+			conn.commit(); // COMMIT TRANSACTION
+		} catch (SQLException sqle) {
+			sqle.printStackTrace();
+			if (conn != null) {
+				try {
+					conn.rollback();
+				} catch (SQLException sqle2) {
+					System.err.println("Error trying to rollback");
+				}
+			}
+			return false;
+		}
+		return true;
+	}
 
 	@Override
 	public Film updateFilm(Film film, int filmId) {
@@ -310,9 +309,8 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 
 	}
 
-	public FilmCategory findFilmCategories(int filmId) {
-	 FilmCategory category = new FilmCategory(); 
-
+	public String findFilmCategories(int filmId) {
+		String category = null;
 		Connection conn = null;
 
 		try {
@@ -324,13 +322,11 @@ public class FilmDaoJdbcImpl implements FilmDAO {
 
 			ResultSet catResult = stmt.executeQuery();
 
-			while (catResult.next()) {
-				category.setId(catResult.getInt(1));
-				category.setName(catResult.getString(2));
-			
+			if (catResult.next()) {
+			category = catResult.getString("name");
 
 			}
-			
+
 			stmt.close();
 			conn.close();
 

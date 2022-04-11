@@ -81,6 +81,9 @@
 				<li>Release Year: ${film.releaseYear}</li>
 				<li>Rating: ${film.rating}</li>
 				<li>Language: ${film.language}</li>
+				<li>Category: ${film.category} </li>
+				<%-- <c:out value="${film.category}"/> --%>
+				
 
 				<li>Cast:</li>
 				<c:forEach var="a" items="${film.actors}">
@@ -89,11 +92,7 @@
 					</ul>
 				</c:forEach>
 				
-				<li>Category:<li>
-			 	<ul>
-			 	<li>${FilmCategory.name}</li>
-			 	</ul>
-				<!-- <li><a href="updatefilm.jsp">Edit Film</a> -->
+		
 
 
 			</ul>
@@ -108,14 +107,13 @@
 					<h3>Film found:</h3>
 
 					<form action="updatefilm.jsp" method="GET">
-						<input type="hidden" name="filmId" value="${f.id}" /> <input
-							type="hidden" name="filmTitle" value="${f.title}" /> <input
-							type="hidden" name="filmDescription" value="${f.description}" />
+						<input type="hidden" name="filmId" value="${f.id}" /> 
+						<input type="hidden" name="filmTitle" value="${f.title}" /> 
+						<input type="hidden" name="filmDescription" value="${f.description}" />
 						<input type="hidden" name="filmLanguageId" value="${f.language}" />
-						<input type="hidden" name="filmReleaseYear"
-							value="${f.releaseYear}" /> <input type="hidden"
-							name="filmRating" value="${f.rating}" /> <input type="submit"
-							value="Edit Film Data" />
+						<input type="hidden" name="filmReleaseYear" value="${f.releaseYear}" /> 
+						<input type="hidden" name="filmRating" value="${f.rating}" /> 
+						<input type="submit" value="Edit Film Data" />
 					</form>
 					
 					
@@ -132,6 +130,8 @@
 					<li>Description: ${f.description}</li>
 					<li>Release Year: ${f.releaseYear}</li>
 					<li>Rating: ${f.rating}</li>
+				<li>Category: ${film.category} </li>
+			<!--	<c:out value="${film.category}"/> -->
 
 					<li>Language: ${f.language}</li>
 					<li>Film ID: ${f.id}</li>
@@ -143,12 +143,10 @@
 						<ul>
 							<li>${a.firstName}${a.lastName}</li>
 						</ul>
- 
-
-
 
 					</c:forEach>
 				</c:forEach>
+				
 
 			</ul>
 					<br>

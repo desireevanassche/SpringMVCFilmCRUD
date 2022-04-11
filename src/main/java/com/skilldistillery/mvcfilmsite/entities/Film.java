@@ -16,6 +16,8 @@ public class Film {
 	private String rating;
 	private String specialFeatures;
 	private String language;
+	private String category;
+
 
 	private List<Actor> actors;
 
@@ -47,6 +49,14 @@ public class Film {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	public String getTitle() {
