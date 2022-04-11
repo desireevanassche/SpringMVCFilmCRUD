@@ -30,7 +30,7 @@
 
       <h1>Create a New Film</h1><br>
 
-	<form action="createfilm.do" method="POST">
+	<form action="createfilm.do" method="POST" id="createForm">
 
 		<label for="title">Title: </label> <input type="text" name="title">
 		
@@ -73,8 +73,9 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
        
-		<li class="nav-item"><a class="nav-link"
-				href=${pageContext.request.contextPath}>Home</a></li>
+	 <li class="nav-item acticve">
+          <a class="nav-link" href=${pageContext.request.contextPath}>Home</a>
+        </li>
         <li class="nav-item acticve">
           <a class="nav-link" href="filmbykey.jsp">Keyword Search</a>
         </li>
@@ -83,6 +84,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="createfilm.jsp">Add Film</a>
+        </li>
+            <li class="nav-item">
+          <a class="nav-link" href="deletefilm.jsp">Delete Film</a>
         </li>
 
      

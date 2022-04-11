@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-	href="https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap"
+	href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap"
 	rel="stylesheet">
 
 <link rel="stylesheet"
@@ -56,7 +56,20 @@
 				<h3>Film Lookup / Created / Edited:</h3>
 
 
-				<form action="updatefilm.jsp" method="GET">
+		
+
+
+
+				<li>Film ID: ${film.id}</li>
+				<li>Title: ${film.title}</li>
+				<li>Description: ${film.description}</li>
+				<li>Release Year: ${film.releaseYear}</li>
+				<li>Rating: ${film.rating}</li>
+				<li>Language: ${film.language}</li>
+				<li>Category: ${film.category} </li>
+				<%-- <c:out value="${film.category}"/> --%>
+				
+						<form action="updatefilm.jsp" method="GET">
 					<input type="hidden" name="filmId" value="${film.id}" /> <input
 						type="hidden" name="filmTitle" value="${film.title}" /> <input
 						type="hidden" name="filmDescription" value="${film.description}" />
@@ -73,18 +86,6 @@
 						 <input type="submit"
 						value="Delete Film" />
 				</form>
-
-
-
-				<li>Film ID: ${film.id}</li>
-				<li>Title: ${film.title}</li>
-				<li>Description: ${film.description}</li>
-				<li>Release Year: ${film.releaseYear}</li>
-				<li>Rating: ${film.rating}</li>
-				<li>Language: ${film.language}</li>
-				<li>Category: ${film.category} </li>
-				<%-- <c:out value="${film.category}"/> --%>
-				
 
 				<li>Cast:</li>
 				<c:forEach var="a" items="${film.actors}">
@@ -104,10 +105,19 @@
 					<h3>Here is what we found:</h3>
 				<c:forEach var="f" items="${films}">
 				<br>
-				<h4>Film:</h4>
-					<h3>Film found:</h3>
+					<h4>Film:</h4>
+					<li>Film ID: ${f.id}</li>
+					<li>Title: ${f.title}</li>
+					<li>Description: ${f.description}</li>
+					<li>Release Year: ${f.releaseYear}</li>
+					<li>Rating: ${f.rating}</li>
+					<li>Category: ${film.category} </li>
+			<!--	<c:out value="${film.category}"/> -->
 
-					<form action="updatefilm.jsp" method="GET">
+					<li>Language: ${f.language}</li>
+					<li>Film ID: ${f.id}</li>
+					<br>
+								<form action="updatefilm.jsp" method="GET">
 						<input type="hidden" name="filmId" value="${f.id}" /> 
 						<input type="hidden" name="filmTitle" value="${f.title}" /> 
 						<input type="hidden" name="filmDescription" value="${f.description}" />
@@ -124,19 +134,7 @@
 						 <input type="submit"
 						value="Delete Film" />
 				</form>
-
-
-					<li>Film ID: ${f.id}</li>
-					<li>Title: ${f.title}</li>
-					<li>Description: ${f.description}</li>
-					<li>Release Year: ${f.releaseYear}</li>
-					<li>Rating: ${f.rating}</li>
-				<li>Category: ${film.category} </li>
-			<!--	<c:out value="${film.category}"/> -->
-
-					<li>Language: ${f.language}</li>
-					<li>Film ID: ${f.id}</li>
-					<br>
+		<br>
 					
 					
 					<li>Cast:</li>
@@ -148,9 +146,12 @@
 					</c:forEach>
 				</c:forEach>
 				
+			
+				
 
 			</ul>
 					<br>
+					
 		</c:when>
 		<c:otherwise>
 			<p>No film found!</p>

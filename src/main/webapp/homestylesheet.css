@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+* {
+	font-family: 'Spectral', serif;
+	background-color: #F6F6F6;
+	color: black;
+}
+
+
 body {
 	font-family: 'Spectral', serif;
 	background-color: #F6F6F6;
@@ -22,6 +29,7 @@ p {
 home {
 	font-size: 18px;
 }
+
 
 #keyPhoto, idimageleft {
 	height: 700px;
@@ -87,10 +95,19 @@ a:hover {
 }
 
 #navigationLocation {
-	padding-top: 175px;;
+	padding-top: 175px;
+	text-align: center;
 	
 }
 
+#updatedFilmResult, #resultList{
+	
+	text-align: center;
+	background-color: #F6F6F6;
+	text-align: center;
+	font-family: 'Spectral', serif;
+	margin: 10px 0px 0px 0px;
+}
 
 
 

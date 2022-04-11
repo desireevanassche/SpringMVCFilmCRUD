@@ -59,14 +59,14 @@
 		<%=passedFilmId%></h1>
 			<br>
 
-			<form action="updatefilm.do" method="POST">
+			<form action="updatefilm.do" method="POST" id="updateForm">
 
 
 				<label for="filmId"></label> <input type="hidden" name="filmId"
 					value="<%=passedFilmId%>"> <label for="title">Title:
-				</label> <input type="text" name="title" value="<%=passedTitle%>"> <label
-					for="description">description: </label> <input type="text"
-					name="description" value="<%=passedDescription%>"> <br>
+				</label> <input type="text" name="title" value="<%=passedTitle%>" style="width: 350px;"><br> <label
+					for="description">Description: </label> <input type="text"
+					name="description" value="<%=passedDescription%>" style="width: 350px;"> <br>
 				<label for="releaseYear">Release Year: </label> <input type="text"
 					name="releaseYear" value="<%=passedReleaseYear%>"> <br>
 				<label for="languageID">Language ID: </label> <select
@@ -76,7 +76,7 @@
 					<option value="3">3 Japanese</option>
 					<option value="4">4 Mandarin</option>
 					<option value="5">5 French</option>
-				</select><br> <br> <br> <label for="rating">Rating: </label> <select
+				</select><label for="rating">Rating: </label> <select
 					name="rating" value="<%=passedRating%>">
 					<option value="G">G</option>
 					<option value="PG">PG</option>
@@ -124,15 +124,21 @@
 					<div class="collapse navbar-collapse" id="navbarNav">
 						<ul class="navbar-nav">
 
-							<li class="nav-item acticve"><a class="nav-link"
-								href="filmbykey.jsp">Keyword Search</a></li>
-							<li class="nav-item"><a class="nav-link" href="filmbyid.jsp">ID
-									Search</a></li>
-							<li class="nav-item"><a class="nav-link"
-								href="createfilm.jsp">Add Film</a></li>
-
-							<li class="nav-item"><a class="nav-link"
-								href="deletefilm.jsp">Delete Film</a></li>
+							 <li class="nav-item acticve">
+          <a class="nav-link" href=${pageContext.request.contextPath}>Home</a>
+        </li>
+        <li class="nav-item acticve">
+          <a class="nav-link" href="filmbykey.jsp">Keyword Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="filmbyid.jsp">ID Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="createfilm.jsp">Add Film</a>
+        </li>
+            <li class="nav-item">
+          <a class="nav-link" href="deletefilm.jsp">Delete Film</a>
+        </li>
 
 						</ul>
 					</div>
