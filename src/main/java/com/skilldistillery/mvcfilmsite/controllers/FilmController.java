@@ -64,8 +64,8 @@ public class FilmController {
 			
 			
 			boolean success = filmDao.deleteFilm(film);
-
-			if (success) {
+			
+			if (success ) {
 				mv.setViewName("WEB-INF/success.jsp");
 				return mv;
 			} else {

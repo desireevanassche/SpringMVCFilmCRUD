@@ -49,6 +49,7 @@
 	</nav>
 
 	<c:choose>
+		
 		<c:when test="${! empty film}">
 
 			<ul id="resultList">
@@ -152,7 +153,7 @@
 					<br>
 		</c:when>
 		<c:otherwise>
-			<p>No film found</p>
+			<p>No film found!</p>
 		</c:otherwise>
 
 
