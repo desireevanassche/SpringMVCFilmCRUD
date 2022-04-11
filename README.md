@@ -28,8 +28,8 @@ Our examples thus far were "@RequestParam" examples where we took things like "k
 
 ### Technology Used
 
-MySQL Database for Objects (films and actors)
-DAO (Connectivity, Prepared Statements, Exception Handling)
-CRUD (in the PS)
-HTML/CSS (Bootstrap)
-Spring (JSP, XML config, etc.)
+1. MySQL Database for Objects (films and actors)
+2. DAO (Connectivity, Prepared Statements, Exception Handling)
+3. CRUD (in the PS)
+4. HTML/CSS (Bootstrap)
+5. Spring (JSP, XML config, etc.)
