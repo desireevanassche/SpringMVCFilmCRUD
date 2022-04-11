@@ -89,7 +89,7 @@
 				<li>Cast:</li>
 				<c:forEach var="a" items="${film.actors}">
 					<ul>
-						<li>${a.firstName}${a.lastName}</li>
+						<li>${a.firstName}  ${a.lastName}</li>
 					</ul>
 				</c:forEach>
 				
@@ -131,7 +131,7 @@
 					<li>Description: ${f.description}</li>
 					<li>Release Year: ${f.releaseYear}</li>
 					<li>Rating: ${f.rating}</li>
-				<li>Category: ${film.category} </li>
+				<li>Category: ${f.category} </li>
 			<!--	<c:out value="${film.category}"/> -->
 
 					<li>Language: ${f.language}</li>
@@ -142,7 +142,7 @@
 					<li>Cast:</li>
 					<c:forEach var="a" items="${f.actors}">
 						<ul>
-							<li>${a.firstName}${a.lastName}</li>
+							<li>${a.firstName}  ${a.lastName}</li>
 						</ul>
 
 					</c:forEach>
